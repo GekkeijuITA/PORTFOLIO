@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div id="marker"></div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="home">
+        <h1>This is me, Lorenzo</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis esse facere aliquam similique obcaecati eius ut perspiciatis suscipit corporis laudantium cumque, voluptate distinctio natus repudiandae eveniet nostrum illum aut expedita!
+        </p>            
+    </div>
+    <div id="about">
+        <h1>skill</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis esse facere aliquam similique obcaecati eius ut perspiciatis suscipit corporis laudantium cumque, voluptate distinctio natus repudiandae eveniet nostrum illum aut expedita!
+        </p>            
+    </div>
+    <div id="contact">            
+    </div>
+</body>
+<script>
+    var marker = document.querySelector('#marker');
+    var item = document.querySelectorAll('nav a');
+
+    function indicator(e)
+    {
+        marker.style.left = e.offsetLeft + 'px';
+        marker.style.width = e.offsetWidth + 'px';
+    }
+
+    item.forEach(link => {
+        link.addEventListener('click' , (e) => {
+            indicator(e.target);
+        })
+    })
+</script>
+</html>
